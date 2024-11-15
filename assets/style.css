@@ -1,0 +1,45 @@
+body {
+  background-image: url(./bg\ op.jpg);
+}
+.card-img-top {
+  width: 200px;
+  height: 200px;
+  border-radius: 30px 30px 30px 30px;
+}
+
+.card {
+  width: 202px;
+  height: 450px;
+  border-radius: 30px;
+}
+
+#buttonMod {
+  position: absolute;
+  bottom: 10px;
+}
+
+.buttonBuy {
+  position: absolute;
+  bottom: 10px;
+  left: 100px;
+}
+
+header {
+  background-color: #1a6fd9;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: background-color 0.5s ease-in;
+}
+
+.modScroll {
+  background-color: #abf5f8;
+}
+
+img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+img:hover {
+  transform: scale(1.5);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
