@@ -22,8 +22,8 @@ if (productId) {
 }
 
 let productForm = document.getElementById('product-form')
-productForm.addEventListener('submit', function (event) {
-  event.preventDefault()
+productForm.addEventListener('submit', function (e) {
+  e.preventDefault()
 
   const product = {
     name: document.getElementById('name').value,
@@ -51,16 +51,14 @@ productForm.addEventListener('submit', function (event) {
     .catch((error) => console.error('Error:', error))
 })
 
-document
-  .getElementById('delete-product')
-  .addEventListener('click', function () {
-    if (productId) {
-      const deleteModal = new bootstrap.Modal(
-        document.getElementById('deleteModal')
-      )
-      deleteModal.show()
-    }
-  })
+document.getElementById('delete').addEventListener('click', function () {
+  if (productId) {
+    const deleteModal = new bootstrap.Modal(
+      document.getElementById('deleteModal')
+    )
+    deleteModal.show()
+  }
+})
 
 document.getElementById('confirmDelete').addEventListener('click', function () {
   if (productId) {

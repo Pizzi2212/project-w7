@@ -49,8 +49,6 @@ document.querySelector('#list').addEventListener('click', (event) => {
 })
 
 function fetchProducts() {
-  const loadingIndicator = document.getElementById('loading-indicator')
-
   fetch('https://striveschool-api.herokuapp.com/api/product/', {
     method: 'GET',
     headers: apiKey,
@@ -58,7 +56,6 @@ function fetchProducts() {
     .then((response) => response.json())
     .then((products) => {
       generateProductCards(products)
-      loadingIndicator.style.display = 'none'
     })
     .catch((error) => {
       console.log('Error')
